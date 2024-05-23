@@ -452,7 +452,7 @@ However, this while loop is indefinite as it listens to a socket, meaning it wil
 
 The main operations in the server run in O(n) time complexity, where n is the number of connected clients. This is because broadcasting a message requires sending it to all n clients. The complexity is manageable for a moderate number of clients but may become a bottleneck as the number of clients grows significantly.
 
-**Connection Handling (serverConnection Function)**
+**Connection handling (serverConnection Function)**
 
    - **socket_server.accept()**: O(1) - Accepting a new connection is a constant-time operation.
    - **client_dic[client_adrr] = ...**: O(1) - Adding a new client to the dictionary is a constant-time operation.
@@ -460,7 +460,7 @@ The main operations in the server run in O(n) time complexity, where n is the nu
 
    The overall time complexity for handling each new connection is O(1).
 
-**Client Communication Handling (comCliente Function)**
+**Client communication handling (comCliente Function)**
 
    - **client_dic[client_adrr]['Socket'].send(...)**: O(1) - Sending a message to the client is a constant-time operation.
    - **userClient(client_adrr)**: O(1) - Receiving the username is considered a constant-time operation.
@@ -469,21 +469,21 @@ The main operations in the server run in O(n) time complexity, where n is the nu
 
    The overall time complexity for handling each message from a client is O(n).
 
-**Broadcasting Messages (broadcastMessage Function)**
+**Broadcasting messages (broadcastMessage Function)**
 
    - **for client in client_dic**: O(n) - Iterating over all clients.
    - **client_dic[client]['Socket'].send(...)**: O(1) - Sending a message to each client is a constant-time operation.
 
    The overall time complexity for broadcasting a message is O(n).
 
-**Deleting a Client (deleteClient Function)**
+**Deleting a client (deleteClient Function)**
 
    - **for client in client_dic**: O(n) - Iterating over all clients to find the one to delete.
    - **client_dic.pop(username)**: O(1) - Removing a client from the dictionary is a constant-time operation.
 
    The overall time complexity for deleting a client is O(n).
 
-*Summary of Time Complexities*
+*Summary of time complexities*
 - Accepting a new connection: O(1)
 - Handling a client message: O(n)
 - Broadcasting a message: O(n)
