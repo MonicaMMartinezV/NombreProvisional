@@ -239,7 +239,7 @@ This is how the others clients see your message:
   Alice: Hello, everyone!
   ```
 
-![Test1.png]
+![Test1](Test1.png)
 
 #### Test 2: User `Monica` responds
 
@@ -256,7 +256,7 @@ This is how the others clients see your message:
   Monica: Hi Alice!
   ```
 
-[Test2.png]
+![Test2](Test2.png)
 
 #### Test 3: User `Carlos` joins and sends a message
 
@@ -280,7 +280,7 @@ This is how the others clients see your message:
   Carlos: Hello all, I'm Carlos.
   ```
 
-[Test3.png]
+![Test3](Test3.png)
 
 #### Test 4: User `Alice` disconnects
 
@@ -289,7 +289,7 @@ This is how the others clients see your message:
   Connection error: [WinError 10054] An existing connection was forcibly closed by the remote host
   ```
 
-[Test4.png]
+![Test4](Test4.png)
 
 Every time you enter your username in the command prompt interface, the chat interface in question will appear on your screen, allowing you to start using the chat's functionalities. You can simulate "being different clients" to test if the chats update accordingly, just like in a live chat.
 
