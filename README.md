@@ -1,84 +1,27 @@
-# **GrammarPy: E2 Generating and Cleaning a Restricted Context Free Grammar**
+# **ThreadsChatPy: E4 Demonstration of a Programming Paradigm**
 
-A grammar that that recognizes the Python language.
+Multi-User Command-Line Chat 
 
+## Description
+### Problem Context
+In today's digital age, communication is crucial, and instant messaging applications are widely used to facilitate this. Applications like WhatsApp, Slack, and Microsoft Teams have become essential tools for personal and professional communication. However, these applications typically run in graphical user interfaces (GUIs). There are scenarios where a simple, lightweight command-line interface (CLI) based chat application is more appropriate. Such scenarios include:
 
-## **Description**
+- **Low Resource Environments**: In environments with limited computational resources, a CLI-based chat application consumes significantly less memory and CPU power compared to GUI-based applications.
+- **Server Management**: System administrators often work in command-line environments. A CLI-based chat tool can be integrated seamlessly into their workflow, enabling efficient communication without switching contexts.
+- **Educational Purposes**: For students and developers learning about concurrent programming, a CLI-based chat application provides a clear and straightforward example of how threading and concurrency can be applied in a practical project.
 
-Programming languages consist of various components, including syntax, semantics, and a predefined set of rules and reserved keywords for correct execution. Consequently, crafting a grammar for any language can be both interesting and challenging. In this project, a grammar was created to verify  'match case' statements following Python's rule set (GeeksforGeeks, 2024).
+### Project Description
 
-Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. The last two characteristics listed are due to a clear and concise syntax, which emphasizes readability and reduces the cost of program maintenance. Python code is typically easy to understand, even for those new to programming, due to its use of meaningful indentation and English-like keywords.
+This project implements a multi-user chat that operates through the command line. The chat application supports multiple users communicating in real-time in a shared chat room. It is built using threads to manage the concurrency required for handling multiple simultaneous user connections and messages.
 
-Indentation is a huge component of the language, instead of using brackets or , in the newer versions of the language, this consists of four blank spaces before any nested operations instead of using curly brackets, this makes the code more readable and can be more easy to follow.
+### Why it is useful
 
-A normal Python “match case” statement can be seen in the following code snippet:
-```python
-match parameter:
-    case first:
-        var1 = var2
-    case second:
-        do_something1(second)
-    case third:
-        match parameter2:
-            case nested_f:
-                do_something2_1(first)
-            case _:
-                nothing_matched_function()
-    case n:
-        do_something4(n)
-    case _:
-        nothing_matched_function()
-```
-The syntax of the language can be seen in the previous example, where the reserved words “match” and “case” are next to a user-defined variable following the next rules:
-1. Any variable has to start with a letter or underscore.
-2. The only special character allowed here is underscore (“_”).
-3. It cannot start with a number but can contain it anywhere on the variable name.
-4. Variables are case sensitive.
+This project is useful for several reasons:
 
-Both “match” and “case” can also take strings and numbers as the parameters. Continuing the syntax rules, “case” should be preceded by the indentation with respect to the indentation of the “match”; it always has to be a tab more of the “match” indentation. A “case” followed by underscore is determined to be a default case and it must be there for every “match” in the code. The statements inside each “case” can be any python pattern that follows the structure of assignment, function calls, etc. However the prohibited patterns are function and class definitions, and library importations.
-
-# Examples of valid “match case” statements.
-
-```python
-match var_1:
-    case 1:
-        print("Path 1")
-    case 2:
-        print("Path 2")
-    case _:
-        print("Default")
-```
-In this case if the var_1 has a numeric value of two, the output of the script will be “Path 2”.
-
-```python
-match var_1:
-    case "Path 1":
-        print("1")
-    case "Path 2":
-        print("2")
-    case _:
-        print("Default")
-```
-In this case if the var_1 has a string with value “Path 1”, the output of the script will be “1”.
-
-```python
-match var_1:
-    case 1:
-        print("Path 1")
-    case 2:
-        print("Path 2")
-    case _:
-        match var_2:
-            case 1:
-                print("Path 3.1")
-            case 2:
-                print("Path 3.2")
-            case _:
-                print("Path 3.Default")
-```
-In this example if the var_1 has an integer value of 3, and var_2 has the same value as val_1, the output of the script will be “Path 3.Default”.
-
-It's important to stress and emphasize that we will be using an LL(1) syntactic analysis, in other words, LL(1) parsing. This technique is widely employed due to its efficiency and simplicity in implementation. The term "LL" signifies that the analysis proceeds from left to right and focuses on the leftmost derivation, meaning that it examines the leftmost part of the input string first and progresses towards the right. The "(1)" specifies that the syntactic analyzer only uses a single lookahead symbol when making analysis decisions, simplifying the process and eliminating the need to backtrack in exploring possible paths. This approach proves particularly beneficial in the context of our solution as it allows for efficient and accurate analysis of the grammatical structure of expressions according to the rules defined in our grammar. By utilizing LL(1) syntactic analysis, we can construct a parser capable of swiftly processing the code and detecting potential syntactic errors, thus enhancing the robustness and reliability of our solution (GeeksforGeeks, 2023).
+1. **Resource Efficiency**: By running in a command-line environment, the chat application requires minimal system resources, making it suitable for use on older hardware or in systems where performance is a critical concern.
+2. **Educational Value**: For students and developers, this project provides practical experience with threading, concurrency, and network programming. It serves as an excellent example of how to handle multiple simultaneous connections and data streams in a real-world application.
+3. **Integration with Other CLI Tools**: The chat application can easily be integrated with other command-line tools and workflows, making it a versatile tool for users who prefer or require command-line environments.
+4. **Customizability and Extension**: Developers can easily extend the application to add new features or integrate it with other systems, thanks to its straightforward design and implementation.
 
 
 ## **Models**
