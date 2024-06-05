@@ -102,8 +102,9 @@ graph TD
     linkStyle 1 stroke:#f66,stroke-width:2px;
 ```
 
-### Communication diagram
+### Communication diagrams
 ![diagramComm](diagramComm.png)
+![diagramComm2](diagramComm2.png)
 
 The presented model illustrates the interaction flow between clients and the server in a multi-user chat application implemented using threads. The chat application facilitates real-time communication between multiple clients connected to a central server.
 
