@@ -1,12 +1,12 @@
-# **ThreadsChatPy: E4 Demonstration of a Programming Paradigm**
+# **ThreadsChatPy: E4 Demonstration of a programming paradigm**
 
-Multi-User Command-Line Chat 
+Multi-User chat 
 
 ## Description
-### Problem Context
-In today's digital age, communication is crucial, and instant messaging applications are widely used to facilitate this. Applications like WhatsApp, Slack, and Microsoft Teams have become essential tools for personal and professional communication. 
+### Problem context
+In today's digital age, communication is crucial, and instant messaging applications are widely used to facilitate this. Applications like "WhatsApp", "Slack", and "Microsoft Teams" have become essential tools for personal and professional communication. 
 
-Live chat is a real-time messaging platform that enables direct communication between customers and businesses via websites or apps. It offers uninterrupted 24/7 support, leveraging automation and AI to provide immediate responses, capture customer needs, and direct queries efficiently. Proactive assistance is a key feature, enabling businesses to engage customers with targeted messages and support across multiple channels, ensuring a cohesive experience. Live chat facilitates personalized, conversational interactions, enhancing customer connection and satisfaction. Automation helps manage support at scale, optimizing resource allocation and providing contextual insights into customer queries. By streamlining processes and enabling multitasking, live chat enhances productivity for support teams while delivering superior customer experiences compared to traditional communication methods like phone calls or emails. Therefore, implementing a Python project with a simple chat feature was the best choice as it aligns with the benefits and functionalities of live chat, offering efficient and effective support solutions in the current landscape (Intercom, 2022).
+Live chat is a real-time messaging platform that enables direct communication between customers and businesses via websites or apps. It offers uninterrupted 24/7 support, leveraging automation and AI to provide immediate responses, capture customer needs, and direct queries efficiently. Proactive assistance is a key feature, enabling businesses to engage customers with targeted messages and support across multiple channels, ensuring a good experience. Live chat facilitates personalized, conversational interactions, enhancing customer connection and satisfaction. Automation helps manage support at scale, optimizing resource allocation and providing contextual insights into customer queries. By streamlining processes and enabling multitasking, live chat enhances productivity for support teams while delivering superior customer experiences compared to traditional communication methods like phone calls or emails. Therefore, implementing a Python project with a simple chat feature was the best choice as it aligns with the benefits and functionalities of live chat, offering efficient and effective support solutions in the current landscape (Intercom, 2022).
 
 However, these applications typically run in graphical user interfaces (GUIs). There are scenarios where a simple, lightweight command-line interface (CLI) based chat application is more appropriate. Such scenarios include:
 
@@ -101,6 +101,9 @@ graph TD
     linkStyle 0 stroke:#f66,stroke-width:2px;
     linkStyle 1 stroke:#f66,stroke-width:2px;
 ```
+
+### Communication diagram
+![diagramComm](diagramComm.png)
 
 The presented model illustrates the interaction flow between clients and the server in a multi-user chat application implemented using threads. The chat application facilitates real-time communication between multiple clients connected to a central server.
 
