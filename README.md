@@ -39,21 +39,21 @@ The application uses threading to handle multiple clients simultaneously. Each c
 ```mermaid
 graph TD
     subgraph Cliente
-        A1[Inicio Cliente]
-        A2[Crear socket y conectarse al servidor]
-        A3[Recibir respuesta 'Connected' del servidor]
-        A4[Pedir nombre de usuario]
-        A5[Enviar nombre de usuario al servidor]
-        A6[Crear hilo para recibir mensajes]
-        A7[Inicio del hilo de recepción de mensajes]
-        A8[Recibir y mostrar mensajes en la GUI]
-        A9[Fin del hilo de recepción]
-        A10[Inicio de la GUI principal]
-        A11[Usuario escribe y envía mensaje]
-        A12[Enviar mensaje al servidor]
-        A13[Actualizar ventana de chat]
-        A14[Cerrar aplicación]
-        A15[Fin Cliente]
+       A1[Start Client]
+        A2[Create socket and connect to server]
+        A3[Receive 'Connected' response from server]
+        A4[Request username]
+        A5[Send username to server]
+        A6[Create thread to receive messages]
+        A7[Start message reception thread]
+        A8[Receive and display messages in the GUI]
+        A9[End of reception thread]
+        A10[Start main GUI]
+        A11[User types and sends message]
+        A12[Send message to server]
+        A13[Update chat window]
+        A14[Close application]
+        A15[End Client]
 
         A1 --> A2
         A2 --> A3
@@ -71,18 +71,18 @@ graph TD
     end
 
     subgraph Servidor
-        B1[Inicio del Servidor]
-        B2[Crear socket y escuchar conexiones]
-        B3[Esperar conexiones de clientes]
-        B4[Aceptar conexión de cliente]
-        B5[Crear hilo para cada cliente]
-        B6[Inicio del hilo de cliente]
-        B7[Enviar respuesta 'Connected' al cliente]
-        B8[Recibir nombre de usuario del cliente]
-        B9[Escuchar y retransmitir mensajes]
-        B10[Manejar desconexión del cliente]
-        B11[Fin del hilo de cliente]
-        B12[Fin del Servidor]
+        B1[Start Server]
+        B2[Create socket and listen for connections]
+        B3[Wait for client connections]
+        B4[Accept client connection]
+        B5[Create thread for each client]
+        B6[Start client thread]
+        B7[Send 'Connected' response to client]
+        B8[Receive username from client]
+        B9[Listen and relay messages]
+        B10[Handle client disconnection]
+        B11[End of client thread]
+        B12[End Server]
 
         B1 --> B2
         B2 --> B3
@@ -106,7 +106,7 @@ graph TD
 ![diagramComm](diagramComm.png)
 ![diagramComm2](diagramComm2.png)
 
-The presented model illustrates the interaction flow between clients and the server in a multi-user chat application implemented using threads. The chat application facilitates real-time communication between multiple clients connected to a central server.
+The presented models illustrates the communication, interaction flow and funtionalities of  clients and the server in a multi-user chat application implemented using threads. The chat application facilitates real-time communication between multiple clients connected to a central server.
 
 To implement this, we will utilize Python's robust support for multithreading, a crucial aspect in network programming for concurrent communication between multiple clients and a server. Python's simplicity and readability facilitate rapid development and maintenance, while its extensive libraries and frameworks simplify the implementation of complex functionalities like multithreading. By leveraging Python's multithreaded architecture, we ensure efficient real-time messaging and seamless interaction within the chat application, ultimately enhancing user experience and satisfaction. This approach allows the server to handle multiple client connections concurrently, enhancing scalability and responsiveness, with each client connection managed in a separate thread. This multithreaded design fosters simultaneous communication without blocking other clients, fostering efficient real-time messaging and ensuring smooth interaction within the chat application (GeeksforGeeks, 2024).
 
